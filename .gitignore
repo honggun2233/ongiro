@@ -1,0 +1,20 @@
+# Node
+node_modules/
+npm-debug.log*
+
+# Next.js
+ongiro-app/.next/
+ongiro-app/out/
+
+# Expo
+ongiro-mobile/.expo/
+ongiro-mobile/dist/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.local
+.env*.local
