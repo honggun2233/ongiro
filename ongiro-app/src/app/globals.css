@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+  --cream: #F5F0E8;
+  --warm-white: #FAF7F2;
+  --deep-brown: #3D2B1F;
+  --mid-brown: #6B4C3B;
+  --light-brown: #A07850;
+  --gold: #C8A96E;
+  --gold-light: #E2C99A;
+  --sage: #8A9A7E;
+  --dusty-rose: #C4977A;
+  --charcoal: #2C2C2C;
+  --soft-gray: #8A8A8A;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: var(--warm-white);
+  color: var(--charcoal);
+  overflow-x: hidden;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+  /* 섹션 공통 패딩 — 모바일에서 타이트하게 */
+  .mob-section { padding: 48px 20px !important; }
+
+  /* 2단 그리드 → 1단 */
+  .mob-grid-2 { grid-template-columns: 1fr !important; gap: 16px !important; }
+
+  /* 3단 그리드 → 1단 */
+  .mob-grid-3 { grid-template-columns: 1fr !important; gap: 16px !important; }
+
+  /* 모바일에서 숨기기 */
+  .mob-hide { display: none !important; }
+
+  /* 가로 flex → 세로 */
+  .mob-col { flex-direction: column !important; gap: 16px !important; }
+
+  /* 텍스트 가운데 정렬 */
+  .mob-center { text-align: center !important; }
+
+  /* 너비 풀 */
+  .mob-full { width: 100% !important; }
+
+  /* 내비바 */
+  .nav-desktop { display: none !important; }
+  .nav-hamburger { display: flex !important; }
+  .mob-px { padding-left: 20px !important; padding-right: 20px !important; }
+
+  /* 히어로 카드 숨김 */
+  .hero-card-wrap { display: none !important; }
+  .hero-content-wrap { padding: 100px 20px 60px !important; max-width: 100% !important; }
+
+  /* How it works 연결선·구분선 */
+  .how-line { display: none !important; }
+  .how-divider { border-right: none !important; padding: 0 !important; margin-bottom: 32px; }
+
+  /* 푸터 */
+  .footer-top { flex-direction: column !important; gap: 32px !important; }
+  .footer-links { flex-direction: column !important; gap: 24px !important; }
+  .footer-bottom { flex-direction: column !important; gap: 12px !important; align-items: flex-start !important; }
+
+  /* 섹션 내부 타이틀 마진 축소 */
+  .mob-title-gap { margin-bottom: 32px !important; }
+
+  /* 카드 내부 패딩 축소 */
+  .mob-card { padding: 20px !important; }
+  .mob-card-header { padding: 28px 20px !important; }
+}
+
+@media (min-width: 769px) {
+  .nav-hamburger { display: none !important; }
+  .nav-mobile-menu { display: none !important; }
+}
+
+/* Reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
